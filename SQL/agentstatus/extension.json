@@ -1,0 +1,50 @@
+{
+  "name": "sql-agentstatus",
+  "version": "0.0.0",
+  "command_name": "sql-agentstatus",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Enumerate SQL Agent status and jobs",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "agentstatus.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "agentstatus.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "link",
+      "desc": "Optional: Execute query through linked server",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "impersonate",
+      "desc": "Optional: User to impersonate during execution",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

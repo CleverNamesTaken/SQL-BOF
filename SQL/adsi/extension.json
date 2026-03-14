@@ -1,0 +1,62 @@
+{
+  "name": "sql-adsi",
+  "version": "0.0.0",
+  "command_name": "sql-adsi",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Obtain ADSI creds from ADSI linked server",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "adsi.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "adsi.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "adsi_linkedserver",
+      "desc": "ADSI linked server name or address",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "linkedserver",
+      "desc": "Optional: Execute query through linked server",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "impersonate",
+      "desc": "Optional: User to impersonate during execution",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "port",
+      "desc": "Optional: ADSI port",
+      "type": "int",
+      "optional": true
+    }
+  ]
+}

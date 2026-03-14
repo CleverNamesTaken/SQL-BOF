@@ -1,0 +1,38 @@
+{
+  "name": "sql-info",
+  "version": "0.0.0",
+  "command_name": "sql-info",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Gather information about the SQL server",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "info.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "info.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

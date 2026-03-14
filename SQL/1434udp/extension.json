@@ -1,0 +1,32 @@
+{
+  "name": "sql-1434udp",
+  "version": "0.0.0",
+  "command_name": "sql-1434udp",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Enumerate SQL Server connection info",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "1434udp.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "1434udp.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server-ip",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    }
+  ]
+}

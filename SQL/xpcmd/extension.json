@@ -1,0 +1,56 @@
+{
+  "name": "sql-xpcmd",
+  "version": "0.0.0",
+  "command_name": "sql-xpcmd",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Execute a system command via xp_cmdshell",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "xpcmd.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "xpcmd.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "command",
+      "desc": "System command to execute via xp_cmdshell",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "linkedserver",
+      "desc": "Optional: Execute through linked server",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "impersonate",
+      "desc": "Optional: User to impersonate during execution",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

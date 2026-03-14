@@ -1,0 +1,57 @@
+
+{
+  "name": "sql-agentcmd",
+  "version": "0.0.0",
+  "command_name": "sql-agentcmd",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Execute a system command using agent jobs",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "agentcmd.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "agentcmd.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "command",
+      "desc": "System command to execute via agent job",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "linkedserver",
+      "desc": "Optional: Execute through linked server",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "impersonate",
+      "desc": "Optional: User to impersonate during execution",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

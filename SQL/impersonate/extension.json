@@ -1,0 +1,38 @@
+{
+  "name": "sql-impersonate",
+  "version": "0.0.0",
+  "command_name": "sql-impersonate",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Enumerate users that can be impersonated",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "impersonate.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "impersonate.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

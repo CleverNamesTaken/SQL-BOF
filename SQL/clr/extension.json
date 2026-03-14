@@ -1,0 +1,62 @@
+{
+  "name": "sql-clr",
+  "version": "0.0.0",
+  "command_name": "sql-clr",
+  "extension_author": "CleverNamesTaken",
+  "original_author": "Tw1sm",
+  "repo_url": "https://github.com/Tw1sm/SQL-BOF",
+  "help": "Load and execute a .NET assembly in a stored procedure",
+  "long_help": "",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "clr.x64.o"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "clr.x86.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "server",
+      "desc": "SQL server to connect to",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "dll_path",
+      "desc": "Path to the .NET assembly DLL",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "function",
+      "desc": "Entry-point function name",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "database",
+      "desc": "Optional: Database to use",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "linkedserver",
+      "desc": "Optional: Execute query through linked server",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "impersonate",
+      "desc": "Optional: User to impersonate during execution",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}
