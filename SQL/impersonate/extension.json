@@ -32,7 +32,8 @@
       "name": "database",
       "desc": "Optional: Database to use",
       "type": "string",
-      "optional": true
+      "optional": true,
+      "default":""
     }
   ]
 }

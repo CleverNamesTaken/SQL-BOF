@@ -38,25 +38,29 @@
       "name": "database",
       "desc": "Optional: Database to use",
       "type": "string",
-      "optional": true
+      "optional": true,
+      "default":""
     },
     {
       "name": "linkedserver",
       "desc": "Optional: Execute query through linked server",
       "type": "string",
-      "optional": true
+      "optional": true,
+      "default":""
     },
     {
       "name": "impersonate",
       "desc": "Optional: User to impersonate during execution",
       "type": "string",
-      "optional": true
+      "optional": true,
+      "default":""
     },
     {
       "name": "port",
       "desc": "Optional: ADSI port",
       "type": "int",
-      "optional": true
+      "optional": true,
+      "default":"4444"
     }
   ]
 }
